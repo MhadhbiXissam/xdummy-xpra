@@ -20,12 +20,14 @@ docker run -it --rm -p 14500:14500 -p 8000:8000 --name ubuntu_xdummy_xpra mhadhb
 from mhadhbixissam/ubuntu:xdummy.xpra 
 
 run apt update 
-
+#overide or modify xstartuyp here 
 run <<EOF
-echo -n '
-echo "gui app startup here ..."
-xeyes & 
-' >> /root/xstartup.sh
+echo -n '#!/bin/bash
+set -euo pipefail
+tilix --working-directory=/root/Desktop --maximize & 
+code-server --bind-addr 0.0.0.0:8000  --auth none /root/Desktop 
+#### put your app here 
+' > /root/xstartup.sh && chmod +x /root/xstartup.sh
 EOF
 
 ```
