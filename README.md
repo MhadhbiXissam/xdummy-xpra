@@ -7,8 +7,8 @@ git clone https://github.com/MhadhbiXissam/xdummy-xpra.git
 cd xdummy-xpra
 make
 ```
-    * for xpra open browser on [http//:localhost:14500](http:localhost:14500)
-    * for code-server open browser on [http//:localhost:8000](http:localhost:8000)
+* for xpra open browser on [http//:localhost:14500](http:localhost:14500)
+* for code-server open browser on [http//:localhost:8000](http:localhost:8000)
 
 ## pull image and run already build : 
 ```bash
